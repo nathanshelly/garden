@@ -1,4 +1,12 @@
-*, *:before, *:after {
+/* TODO: customize this
+ *
+ * - update fonts
+ *
+ */
+
+*,
+*:before,
+*:after {
   box-sizing: border-box;
 }
 
@@ -10,7 +18,12 @@ body {
   color: #36393b;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: Rubik, sans-serif;
   font-weight: 700;
   line-height: 1.2;
@@ -44,13 +57,16 @@ h6 {
   font-size: 1.2em;
 }
 
-p, ul, ol {
+p,
+ul,
+ol {
   font-size: 1.3rem;
   line-height: 1.75em;
   margin: 1.2em 0;
 }
 
-ol, ul {
+ol,
+ul {
   padding-left: 2rem;
   -webkit-padding-start: 5%;
   -webkit-padding-end: 5%;
@@ -67,7 +83,7 @@ li p {
 
 a {
   color: inherit;
-  transition: color linear .15s;
+  transition: color linear 0.15s;
 }
 
 a:hover {
@@ -77,13 +93,13 @@ a:hover {
 p a {
   text-decoration: none;
   box-shadow: inset 0 -0.12em 0 #fd6378;
-  -webkit-transition: box-shadow .2s ease-in-out, color .2s ease-in-out;
-  transition: box-shadow .2s ease-in-out, color .2s ease-in-out;
+  -webkit-transition: box-shadow 0.2s ease-in-out, color 0.2s ease-in-out;
+  transition: box-shadow 0.2s ease-in-out, color 0.2s ease-in-out;
 }
 
 p a:hover {
   box-shadow: inset 0 -1.5em 0 #fd6378;
-  color: #FFF;
+  color: #fff;
 }
 
 img {
@@ -91,7 +107,12 @@ img {
 }
 
 hr {
-  background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(253, 99, 120, .8), rgba(0, 0, 0, 0));
+  background-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0),
+    rgba(253, 99, 120, 0.8),
+    rgba(0, 0, 0, 0)
+  );
   border: 0;
   height: 2px;
   margin: 40px auto;
@@ -109,8 +130,8 @@ code {
 }
 
 pre {
-  border-radius: 8px!important;
-  margin: 1.2em 0!important;
+  border-radius: 8px !important;
+  margin: 1.2em 0 !important;
 }
 
 pre code {
@@ -188,7 +209,9 @@ td {
     font-size: 14px;
   }
 
-  p, ul, ol {
+  p,
+  ul,
+  ol {
     font-size: 1.2rem;
     margin: 1em 0;
   }
