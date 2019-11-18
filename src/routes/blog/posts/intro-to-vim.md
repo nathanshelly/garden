@@ -324,4 +324,4 @@ This guide only scratches the surface of `vim`’s features. Here’s a random g
 
 ## Acknowledgment
 
-Thanks to Sasha Weiss for his [excellent tutorial](https://gist.github.com/sashaweiss/d1b64e2cd0440159f00ba1f71625e76d) given last year that I borrowed from in writing this guide.
+Thanks to [Sasha Weiss](asashaweiss.com) for his [excellent tutorial](https://gist.github.com/sashaweiss/d1b64e2cd0440159f00ba1f71625e76d) given last year that I borrowed from in writing this guide.
