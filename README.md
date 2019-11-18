@@ -1,6 +1,6 @@
 # mostly dotfiles writings
 
-The start of my blog. See it [here](TODO.org).
+My blog. See it @ [(nathanshelly.dev](nathanshelly.dev).
 
 <!-- TODO: make this helpful -->
 
