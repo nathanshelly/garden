@@ -1,6 +1,6 @@
 # mostly dotfiles writings
 
-My blog. See it @ [(nathanshelly.dev](nathanshelly.dev).
+My blog. See it @ [nathanshelly.dev](nathanshelly.dev).
 
 <!-- TODO: make this helpful -->
 
