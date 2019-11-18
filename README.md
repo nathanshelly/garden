@@ -1,4 +1,4 @@
-# blog
+# mostly dotfiles writings
 
 The start of my blog. See it [here](TODO.org).
 
