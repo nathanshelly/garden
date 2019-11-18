@@ -3,7 +3,7 @@ title: An intro to Vim
 date: 2019-11-17T20:30:00.000Z
 ---
 
-An intro to `vim`'s fundamentals.
+An intro to Vim's fundamentals.
 
 <!-- more -->
 
