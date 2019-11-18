@@ -6,6 +6,11 @@
     min-height: 100vh;
   }
 
+  h1 {
+    margin: 1em 0;
+    text-align: center;
+  }
+
   main {
     flex: 1;
     position: relative;
@@ -32,13 +37,15 @@
 </style>
 
 <div class="layout">
+  <a href="."><h1>mostly dotfiles writings</h1></a>
+
   <main>
     <slot></slot>
   </main>
 
   <footer>
     <a href="https://github.com/nathanshelly">
-      <img id='github-logo' src="GitHub-Mark-Light-32px.png" alt="GitHub account">
+      <img id='github-logo' src="GitHub-Mark-32px.png" alt="GitHub account">
     </a>
   </footer>
 </div>

@@ -1,3 +1,5 @@
+// TODO: understand any of this
+
 const fs = require('fs')
 const path = require('path')
 const prism = require('prismjs')
