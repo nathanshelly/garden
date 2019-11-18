@@ -1,9 +1,3 @@
-<script>
-  import Header from '../components/Header.svelte';
-
-  export let segment;
-</script>
-
 <style>
   .layout {
     display: flex;
@@ -38,17 +32,13 @@
 </style>
 
 <div class="layout">
-  <Header {segment}/>
-
   <main>
     <slot></slot>
   </main>
 
   <footer>
-    <span>
-      &copy; {new Date().getFullYear()} Your Blog.
-      Powered by <a href="https://sapper.svelte.dev" target="_blank">Sapper</a>.
-      Template by <a href="https://www.twitter.com/Charca" target="_blank">Maxi Ferreira</a>.
-    </span>
+    <a href="https://github.com/nathanshelly">
+      <img id='github-logo' src="GitHub-Mark-Light-32px.png" alt="GitHub account">
+    </a>
   </footer>
 </div>
