@@ -13,20 +13,23 @@ const cwd = process.cwd()
 const POSTS_DIR = path.join(cwd, 'src/routes/blog/posts/')
 const EXCERPT_SEPARATOR = '<!-- more -->'
 const renderer = new marked.Renderer()
-const linkRenderer = renderer.link;
+const linkRenderer = renderer.link
 renderer.link = (href, title, text) => {
-    const html = linkRenderer.call(renderer, href, title, text)
+  const html = linkRenderer.call(renderer, href, title, text)
 
-    if (href.indexOf('/') === 0) {
-      // Do not open internal links on new tab
-      return html
-    } else if (href.indexOf('#') === 0) {
-      // Handle hash links to internal elements
-      const html = linkRenderer.call(renderer, 'javascript:;', title, text)
-      return html.replace(/^<a /, `<a onclick="document.location.hash='${href.substr(1)}';" `)
-    }
+  if (href.indexOf('/') === 0) {
+    // Do not open internal links on new tab
+    return html
+  } else if (href.indexOf('#') === 0) {
+    // Handle hash links to internal elements
+    const html = linkRenderer.call(renderer, 'javascript:;', title, text)
+    return html.replace(
+      /^<a /,
+      `<a onclick="document.location.hash='${href.substr(1)}';" `,
+    )
+  }
 
-    return html.replace(/^<a /, '<a target="_blank" rel="nofollow" ')
+  return html.replace(/^<a /, '<a target="_blank" rel="nofollow" ')
 }
 
 renderer.code = (code, language) => {
@@ -35,14 +38,15 @@ renderer.code = (code, language) => {
   return `<pre class="language-${language}"><code class="language-${language}">${highlighted}</code></pre>`
 }
 
-marked.setOptions({ renderer })
+marked.setOptions({renderer})
 
-const posts = fs.readdirSync(POSTS_DIR)
+const posts = fs
+  .readdirSync(POSTS_DIR)
   .filter(fileName => /\.md$/.test(fileName))
   .map(fileName => {
     const fileMd = fs.readFileSync(path.join(POSTS_DIR, fileName), 'utf8')
-    const { data, content: rawContent } = matter(fileMd)
-    const { title, date } = data
+    const {data, content: rawContent} = matter(fileMd)
+    const {title, date} = data
     const slug = fileName.split('.')[0]
     let content = rawContent
     let excerpt = ''
