@@ -136,7 +136,7 @@ Next let’s add a few plugins. There are far too many to list but here’s a fe
 
 Here is what your `.zshrc` should look like at the end of this:
 
-````bash
+```bash
 ... # whatever configuration you have before your plugins
 
 # initialization of `zplugin`
@@ -192,4 +192,7 @@ Here are the four used above:
   - [`atinit`](https://github.com/zdharma/zplugin#command-execution-after-cloning-updating-or-loading) - run given command after directory setup (cloning, checking it, etc.) of plugin/snippet but before loading
   - [`lucid`](https://github.com/zdharma/zplugin#plugin-output) - skip `Loaded <plugin-name>` message for asynchronously loaded plugins
 - [`depth`](https://github.com/zdharma/zplugin#cloning-options) - limits how much git history of the project to load
-````
+
+```
+
+```
