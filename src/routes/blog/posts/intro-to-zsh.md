@@ -17,7 +17,7 @@ An intro to `zsh`, a superset (mostly) of `bash` with modern bells and whistles.
     - [`bash` comparison](#bash-comparison)
   - [Plugins](#plugins)
 - [Appendix](#appendix)
-  - [`ice` mods](#ice-mods)
+  - [`ice` modifiers](#ice-modifiers)
 
 ## TL;DR
 
