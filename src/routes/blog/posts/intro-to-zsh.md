@@ -192,7 +192,3 @@ Here are the four used above:
   - [`atinit`](https://github.com/zdharma/zplugin#command-execution-after-cloning-updating-or-loading) - run given command after directory setup (cloning, checking it, etc.) of plugin/snippet but before loading
   - [`lucid`](https://github.com/zdharma/zplugin#plugin-output) - skip `Loaded <plugin-name>` message for asynchronously loaded plugins
 - [`depth`](https://github.com/zdharma/zplugin#cloning-options) - limits how much git history of the project to load
-
-```
-
-```
