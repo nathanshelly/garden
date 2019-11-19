@@ -3,13 +3,13 @@ title: An intro to Vim
 date: 2019-11-17T20:30:00.000Z
 ---
 
-An intro to Vim's fundamentals.
+An introduction to Vim's fundamentals
 
 <!-- more -->
 
 This post is an opinionated introduction to some of [Vim](https://www.vim.org/)'s fundamentals. It touches on `.vimrc` configuration and plugins (or plugin managers) briefly but leaves most of that for another guide (which I will hopefully get around to writing someday 🤞).
 
-> I originally wrote this guide while TAing an introductory systems class at Northwestern University. Since writing it I have switched from `vim` to [`neovim`](https://github.com/neovim/neovim). These two editors are actually so similar that every single thing I wrote here translates though so thankfully no need to rewrite ✏️
+> I originally wrote this guide while TAing an introductory systems class at Northwestern University. Since writing it I have switched from `vim` to [`neovim`](https://github.com/neovim/neovim). These two editors are so similar that every single thing I wrote here translates though so thankfully no need to rewrite ✏️
 >
 > Here's my [current configuration](https://github.com/nathanshelly/.files/tree/master/neovim) and [my specific reasoning for using `neovim`](https://github.com/nathanshelly/.files/tree/master/neovim#why-neovim) if you're curious.
 
