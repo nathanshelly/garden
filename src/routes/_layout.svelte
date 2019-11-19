@@ -37,7 +37,7 @@
 </style>
 
 <div class="layout">
-  <a href="."><h1>mostly dotfiles writings</h1></a>
+  <a href="."><h1>mostly dotfiles</h1></a>
 
   <main>
     <slot></slot>

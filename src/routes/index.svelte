@@ -38,7 +38,7 @@
 </style>
 
 <svelte:head>
-  <title>mostly dotfiles writings</title>
+  <title>mostly dotfiles</title>
 </svelte:head>
 
 <div class="wrapper">
