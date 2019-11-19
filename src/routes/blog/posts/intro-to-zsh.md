@@ -1,6 +1,6 @@
 ---
 title: An intro to Zsh
-date: 2019-11-18T18:30:00.000Z
+date: 2019-11-18T22:30:00.000Z
 ---
 
 An introduction to Zsh
