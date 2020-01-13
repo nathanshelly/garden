@@ -316,7 +316,7 @@ This guide only scratches the surface of `vim`’s features. Here’s a random g
 - folds - hide and show code for easier readability
 - marks - set marks to easily jump between locations in a document
 - `:!` - type `!` in `command-line` mode then any shell command to execute that command in the folder `vim` was launched from (e.g. `:!ls` to list the the files in the current folder)
-- registers - yank and paste to multiple buffers, including the system buffer (to copy and paste between `vim` and other programs)
+- registers ([see my in-depth post for more](/blog/registers-in-vim)) - yank and paste to multiple buffers, including the system buffer (to copy and paste between `vim` and other programs)
 
 - Interactive tutorials
   - `vimtutor` - enter at the command line like you would to launch `vim`
