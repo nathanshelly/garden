@@ -25,7 +25,7 @@ This post briefly explains how to use registers in `vim` and provides quick over
     - [`.` (contains last text inserted)](<#.-(contains-last-text-inserted)>)
     - [`%` (the current file name)](<#%25-(the-current-file-name)>)
     - [`-` (last small deletion)](<#--(last-small-deletion)>)
-    - [`"` (unnamed register)](<#"-(unnamed-register)>)
+    - [`"` (unnamed register)](<#%22-(unnamed-register)>)
 - [References](#references)
 
 ---
