@@ -154,7 +154,11 @@ In `normal` mode:
 
 ### Copy and paste
 
-In `normal` mode hit `y<motion>` to copy (yank) the current line. Hit `p` (again in `normal` mode) to paste the `yanked` line after the cursor (in the case of whole lines this will paste on the next line). Hit `P` to paste before the cursor (or the line above in the case of whole lines). Important to note that `dd` and `cc` both yank the current line as well, overwriting the copy buffer.
+In `normal` mode hit `y<motion-or-text-object>` to yank (copy) the corresponding motion or text object. For example, `yy` copies the current line (newline included), `yw` copies the rest of the word, etc.
+
+Hit `p` (again in `normal` mode) to paste the yanked text after the cursor (in the case of whole lines this will paste on the next line). Hit `P` to paste before the cursor (or the line above in the case of whole lines).
+
+> `dd` and `cc` both yank the current line as well, overwriting the copy buffer.
 
 ### Indentation
 
@@ -274,7 +278,7 @@ Here’s a guide on using splits for additional information: [`vim` Splits - Mov
 
 > Note: configuration is about the only part of this guide where differences between `neovim` & `vim` need to be accounted for. If you're using `neovim` replace any instances of `.vimrc` with `init.vim` & `~/.vimrc` w/ `~/.config/nvim/init.vim`.
 
-Configuration is done is a `.vimrc`, usually located in your home directory, e.g. `~/.vimrc`.
+`vim` is configured via a `.vimrc`, usually located in your home directory, e.g. `~/.vimrc`.
 
 As you start to use `vim` more you might want to define your own custom commands, or remap keys, or use a particular set of non-default settings. To create these and maintain them between `vim` sessions you use a configuration file called a `.vimrc` (pronounced `vim-are-see`).
 
