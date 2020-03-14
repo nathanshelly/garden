@@ -15,9 +15,9 @@
     "compression": "^1.7.1",
     "date-fns": "^1.30.1",
     "gray-matter": "^4.0.2",
-    "marked": "^0.6.2",
+    "marked": "^0.7.0",
     "polka": "^0.5.0",
-    "prismjs": "^1.16.0",
+    "prismjs": "^1.21.0",
     "reading-time": "^1.2.0",
     "sirv": "^0.4.0"
   },
@@ -35,7 +35,7 @@
     "rollup-plugin-replace": "^2.0.0",
     "rollup-plugin-svelte": "^5.0.1",
     "rollup-plugin-terser": "^4.0.4",
-    "sapper": "^0.27.0",
+    "sapper": "^0.27.11",
     "svelte": "^3.0.0"
   }
 }
