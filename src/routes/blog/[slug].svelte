@@ -1,8 +1,10 @@
 <script context="module" lang="ts">
-  export async function preload({params}) {
+  import type {Preload} from '@sapper/common'
+
+  export const preload: Preload = async function (this, {params: {slug}}) {
     // the `slug` parameter is available because
     // this file is called [slug].html
-    const res = await this.fetch(`blog/${params.slug}.json`)
+    const res = await this.fetch(`blog/${slug}.json`)
     const data = await res.json()
 
     if (res.status === 200) {

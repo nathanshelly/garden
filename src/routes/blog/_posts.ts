@@ -1,7 +1,7 @@
+import fm from 'front-matter'
 import fs from 'fs'
 import formatDate from 'date-fns/format'
 import marked from 'marked'
-import matter from 'gray-matter'
 import path from 'path'
 import prism from 'prismjs'
 import readingTime from 'reading-time'
@@ -57,9 +57,9 @@ const posts: Post[] = fs
   .map(fileName => {
     const fileMd = fs.readFileSync(path.join(POSTS_DIR, fileName), 'utf8')
     const {
-      data: {title, date},
-      content: rawContent,
-    } = matter(fileMd)
+      attributes: {title, date},
+      body: rawContent,
+    } = fm(fileMd)
     const slug = fileName.split('.')[0]
     let content = rawContent
     let excerpt = ''

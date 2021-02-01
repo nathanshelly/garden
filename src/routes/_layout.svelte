@@ -25,7 +25,7 @@
   }
 
   footer {
-    color: #AAA;
+    color: #aaa;
     font-size: 1em;
     font-family: Rubik, sans-serif;
     margin: 1em auto;
@@ -40,12 +40,12 @@
   <a href="."><h1>mostly dotfiles</h1></a>
 
   <main>
-    <slot></slot>
+    <slot />
   </main>
 
   <footer>
     <a href="https://github.com/nathanshelly/garden">
-      <img id='github-logo' src="GitHub-Mark-32px.png" alt="GitHub account">
+      <img id="github-logo" src="GitHub-Mark-32px.png" alt="GitHub account" />
     </a>
   </footer>
 </div>
