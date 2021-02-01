@@ -1,20 +1,22 @@
-<script context="module">
-  export async function preload({ params, query }) {
+<script context="module" lang="ts">
+  export async function preload({params}) {
     // the `slug` parameter is available because
     // this file is called [slug].html
-    const res = await this.fetch(`blog/${params.slug}.json`);
-    const data = await res.json();
+    const res = await this.fetch(`blog/${params.slug}.json`)
+    const data = await res.json()
 
     if (res.status === 200) {
-      return { post: data };
+      return {post: data}
     } else {
-      this.error(res.status, data.message);
+      this.error(res.status, data.message)
     }
   }
 </script>
 
-<script>
-  export let post
+<script lang="ts">
+  import type {Post} from './_posts'
+
+  export let post: Post
 </script>
 
 <style>
@@ -27,7 +29,7 @@
   }
 
   header p {
-    color: #AAA;
+    color: #aaa;
     text-transform: uppercase;
     font-family: Rubik, sans-serif;
     font-weight: 600;

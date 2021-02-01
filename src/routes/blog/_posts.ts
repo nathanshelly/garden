@@ -1,22 +1,21 @@
-// TODO: understand any of this
-
-const fs = require('fs')
-const path = require('path')
-const prism = require('prismjs')
-const marked = require('marked')
-const matter = require('gray-matter')
-const formatDate = require('date-fns/format')
-const readingTime = require('reading-time')
+import fs from 'fs'
+import formatDate from 'date-fns/format'
+import marked from 'marked'
+import matter from 'gray-matter'
+import path from 'path'
+import prism from 'prismjs'
+import readingTime from 'reading-time'
 
 // Support JSX syntax highlighting
-require('prismjs/components/prism-jsx.min')
+import 'prismjs/components/prism-jsx.min'
 
 const cwd = process.cwd()
 const POSTS_DIR = path.join(cwd, 'src/routes/blog/posts/')
 const EXCERPT_SEPARATOR = '<!-- more -->'
 const renderer = new marked.Renderer()
 const linkRenderer = renderer.link
-renderer.link = (href, title, text) => {
+
+renderer.link = (href: any, title: any, text: any) => {
   const html = linkRenderer.call(renderer, href, title, text)
 
   if (href.indexOf('/') === 0) {
@@ -42,13 +41,25 @@ renderer.code = (code, language) => {
 
 marked.setOptions({renderer})
 
-const posts = fs
+export type Post = {
+  title: string
+  slug: string
+  html: string
+  date: Date
+  excerpt: string
+  printDate: string
+  printReadingTime: string
+}
+
+const posts: Post[] = fs
   .readdirSync(POSTS_DIR)
   .filter(fileName => /\.md$/.test(fileName))
   .map(fileName => {
     const fileMd = fs.readFileSync(path.join(POSTS_DIR, fileName), 'utf8')
-    const {data, content: rawContent} = matter(fileMd)
-    const {title, date} = data
+    const {
+      data: {title, date},
+      content: rawContent,
+    } = matter(fileMd)
     const slug = fileName.split('.')[0]
     let content = rawContent
     let excerpt = ''
@@ -59,10 +70,12 @@ const posts = fs
       content = splittedContent[1]
     }
 
-    const html = marked(content)
+    const rawHtml = marked(content)
+    const html = rawHtml.replace(/^\t{3}/gm, '')
+
     const readingStats = readingTime(content)
     const printReadingTime = readingStats.text
-    const printDate = formatDate(new Date(date), 'MMMM D, YYYY')
+    const printDate = formatDate(new Date(date), 'MMMM d, yyyy')
 
     return {
       title: title || slug,
@@ -82,10 +95,6 @@ posts.sort((a, b) => {
   if (dateA > dateB) return -1
   if (dateA < dateB) return 1
   return 0
-})
-
-posts.forEach(post => {
-  post.html = post.html.replace(/^\t{3}/gm, '')
 })
 
 export default posts

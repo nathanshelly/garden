@@ -1,15 +1,15 @@
-<script context="module" lang="ts">
-  import type {Post} from './blog/_posts'
+<script context="module" lang="ts" >
+  import type {Post} from "./_posts";
 
   export function preload() {
-    return this.fetch(`blog.json`)
-      .then((r: {json: () => any}) => r.json())
-      .then((posts: Post[]) => ({posts}))
+    return this.fetch(`blog.json`).then((r: { json: () => any }) => r.json()).then((posts: Post[]) => {
+      return { posts };
+    });
   }
 </script>
 
 <script lang="ts">
-  export let posts: Post[]
+  export let posts: Post[];
 </script>
 
 <style>
@@ -20,7 +20,7 @@
   }
 
   .post-item-date {
-    color: #aaa;
+    color: #AAA;
     text-align: left;
     text-transform: uppercase;
     margin-right: 16px;
@@ -50,7 +50,9 @@
         <hr />
       {/if}
       <div class="post-item">
-        <h2><a rel="prefetch" href="blog/{post.slug}">{post.title}</a></h2>
+        <h2>
+          <a rel='prefetch' href='blog/{post.slug}'>{post.title}</a>
+        </h2>
         <p>{post.excerpt}</p>
         <div class="post-item-footer">
           <span class="post-item-date">— {post.printDate}</span>

@@ -44,7 +44,7 @@
   </main>
 
   <footer>
-    <a href="https://github.com/nathanshelly/blog">
+    <a href="https://github.com/nathanshelly/garden">
       <img id='github-logo' src="GitHub-Mark-32px.png" alt="GitHub account">
     </a>
   </footer>

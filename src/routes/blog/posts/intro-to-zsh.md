@@ -21,6 +21,14 @@ An intro to `zsh`, a superset (mostly) of `bash` with modern bells and whistles.
 
 ## TL;DR
 
+```typescript
+const foo = 'bar'
+
+export default {
+  foo: 'hi',
+}
+```
+
 Run the following commands:
 
 ```bash
