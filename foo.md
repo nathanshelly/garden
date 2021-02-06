@@ -12,8 +12,3 @@ quarterly playlists filled with what I'm enjoying at the time
 [`/🔥`](https://nathanshelly.dev/🔥)).
 
 <!-- TODO: make this helpful -->
-
-## thanks
-
-Thanks to [Charca](https://github.com/Charca) for [the original
-template](https://github.com/Charca/sapper-blog-template).
