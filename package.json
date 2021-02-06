@@ -8,7 +8,7 @@
     "cy:open": "cypress open",
     "cy:run": "cypress run",
     "check-ts": "svelte-check --ignore src/node_modules/@sapper",
-    "dev": "PORT=6106 sapper dev",
+    "dev": "PORT=1111 sapper dev",
     "export": "sapper export --legacy",
     "start": "node __sapper__/build",
     "test": "run-p --race dev cy:run"
