@@ -1,15 +1,15 @@
 <script context="module" lang="ts">
-  import type {Preload} from '@sapper/common'
+	import type { Load } from '@sveltejs/kit';
 
-  import type {Post} from './blog/_posts'
-  import {preloadPosts} from './blog/_preloadPosts.ts'
-  import Posts from './blog/Posts.svelte'
+	import type { Post } from './blog/_posts';
+	import { loadPosts } from './blog/_preloadPosts';
+	import Posts from './blog/Posts.svelte';
 
-  export const preload: Preload = preloadPosts
+	export const load: Load = loadPosts;
 </script>
 
 <script lang="ts">
-  export let posts: Post[]
+	export let posts: Post[];
 </script>
 
 <Posts {posts} />

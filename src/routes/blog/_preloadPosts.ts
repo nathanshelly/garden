@@ -1,9 +1,10 @@
-import type {Preload} from '@sapper/common'
+import type { Load } from '@sveltejs/kit';
 
-import type {Post} from './_posts'
+import type { Post } from './_posts';
 
-export const preloadPosts: Preload = async function (this) {
-  const res = await this.fetch('blog.json')
-  const posts: Post[] = await res.json()
-  return {posts}
-}
+export const loadPosts: Load = async function ({ fetch }) {
+	const res = await fetch('blog.json');
+	const posts: Post[] = await res.json();
+	// console.log('posts: ', posts);
+	return { props: { posts } };
+};
