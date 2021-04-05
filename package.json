@@ -4,13 +4,12 @@
 	"version": "0.0.1",
 	"license": "MIT",
 	"scripts": {
-		"build": "svelte-kit build --legacy",
+		"build": "svelte-kit build",
 		"check-ts": "svelte-check",
 		"dev": "svelte-kit dev",
-		"export": "svelte-kit export --legacy",
 		"format": "prettier --write .",
 		"lint": "prettier --check . && eslint --ignore-path .gitignore .",
-		"start": "svelete-kit start",
+		"start": "svelte-kit start",
 		"test": "run-p --race dev cy:run"
 	},
 	"dependencies": {

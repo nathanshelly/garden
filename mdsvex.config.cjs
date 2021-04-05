@@ -1,19 +1,26 @@
 module.exports = {
-	extensions: [".svx", ".md"],
+	extensions: ['.svx', '.md'],
+	layout: './src/lib/Post.svelte',
 	smartypants: {
-		dashes: "oldschool",
+		dashes: 'oldschool'
 	},
 	remarkPlugins: [
-		[require("remark-github"), {
-			// Use your own repository
-			repository: "https://github.com/svelte-add/mdsvex.git",
-		}],
-		require("remark-abbr"),
+		[
+			require('remark-github'),
+			{
+				// Use your own repository
+				repository: 'https://github.com/svelte-add/mdsvex.git'
+			}
+		],
+		require('remark-abbr')
 	],
 	rehypePlugins: [
-		require("rehype-slug"),
-		[require("rehype-autolink-headings"), {
-			behavior: "wrap",
-		}],
-	],
+		require('rehype-slug'),
+		[
+			require('rehype-autolink-headings'),
+			{
+				behavior: 'wrap'
+			}
+		]
+	]
 };
