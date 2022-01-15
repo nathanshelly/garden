@@ -17,7 +17,7 @@
     "compression": "^1.7.1",
     "date-fns": "^2.16.1",
     "front-matter": "^4.0.2",
-    "marked": "2.0.0",
+    "marked": "4.0.10",
     "polka": "^0.5.0",
     "prismjs": "^1.25.0",
     "reading-time": "^1.2.0",
