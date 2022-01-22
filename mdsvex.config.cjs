@@ -1,6 +1,10 @@
+const { join } = require('path');
+
+const path_to_layout = join(__dirname, 'src/lib/Post.svelte');
+
 module.exports = {
 	extensions: ['.svx', '.md'],
-	layout: './src/lib/Post.svelte',
+	layout: path_to_layout,
 	smartypants: {
 		dashes: 'oldschool'
 	},
